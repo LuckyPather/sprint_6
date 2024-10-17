@@ -1,3 +1,8 @@
+class Url:
+    MAIN_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/'
+    ORDER_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/order'
+
+
 class QuestionText:
     QUESTION_1 = 'Сколько это стоит? И как оплатить?'
     QUESTION_2 = 'Хочу сразу несколько самокатов! Так можно?'
@@ -23,7 +28,3 @@ class AnswerText:
     ANSWER_7 = 'Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.'
     ANSWER_8 = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'
 
-
-class Url:
-    MAIN_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/'
-    ORDER_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/order'
