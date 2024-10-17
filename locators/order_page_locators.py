@@ -1,13 +1,9 @@
 from selenium.webdriver.common.by import By
 
 
-class ButtonChoose:
+class OrderCard:
     UPPER_BUTTON_GET_ORDER = By.XPATH, ("//*[@class='Button_Button__ra12g' and text("
                                         ")='Заказать']")
-    DOWN_BUTTON_GET_ORDER = By.XPATH, "//*[@class='Button_Button__ra12g Button_UltraBig__UU3Lp' and text()='Заказать']"
-
-
-class OrderCard:
     # Карточка заказа
     NAME = By.XPATH, "//*[@placeholder = '* Имя']"
     SURNAME = By.XPATH, "//*[@placeholder = '* Фамилия']"
@@ -22,7 +18,6 @@ class OrderCard:
     DATA = By.XPATH, "//*[@placeholder = '* Когда привезти самокат']"
     DATA_DAY = By.CSS_SELECTOR, ".react-datepicker__day--017"
     LEASE_PERIOD_ROW = By.XPATH, "//*[@class = 'Dropdown-placeholder' and text()='* Срок аренды']"  # Нажимаем чтобы появился следующий элемент
-    LEASE_PERIOD_DROPDOWN = By.XPATH, "//div[contains(@class, 'Dropdown-menu')]"  # Общий контейнер, пока не понятно нужен или нет
     LEASE_PERIOD_DROPDOWN_OPTION = By.XPATH, "//div[@class='Dropdown-option']"  # Опция, искать будем по совпадению текста
     # Цвет самоката
     COLOR_BLACK = By.ID, "black"

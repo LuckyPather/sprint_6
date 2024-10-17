@@ -31,5 +31,5 @@ class BasePage:
         return method, locator
 
     def scroll_to_element(self, locator):
-        element = self.driver.find_element(*locator)
+        element = WebDriverWait(self.driver, 5).until(expected_conditions.element_to_be_clickable(locator)).click()
         self.driver.execute_script("arguments[0].scrollIntoView();", element)

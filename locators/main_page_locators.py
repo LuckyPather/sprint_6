@@ -7,4 +7,5 @@ class MainPageLocators:
 
     QUESTION_8 = By.ID, 'accordion__heading-7'
 
+    ACCEPT_COOKIE_BUTTON = By.ID, 'rcc-confirm-button'
 
