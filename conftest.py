@@ -20,6 +20,6 @@ def pytest_configure(config):
 
 @pytest.fixture
 def connection():
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     yield driver
     driver.quit()
