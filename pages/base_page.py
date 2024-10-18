@@ -1,6 +1,8 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
+from locators.main_page_locators import MainPageLocators
+
 
 class BasePage:
 
@@ -31,5 +33,8 @@ class BasePage:
         return method, locator
 
     def scroll_to_element(self, locator):
-        element = WebDriverWait(self.driver, 5).until(expected_conditions.element_to_be_clickable(locator)).click()
+        element = WebDriverWait(self.driver, 5).until(expected_conditions.element_to_be_clickable(locator))
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    def accept_cookie(self):
+        self.click_to_element(MainPageLocators.ACCEPT_COOKIE_BUTTON_UPPER)

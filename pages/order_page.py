@@ -6,14 +6,13 @@ from selenium.webdriver.common.keys import Keys
 
 from pages.base_page import BasePage
 from locators.order_page_locators import OrderCard
-from locators.main_page_locators import MainPageLocators
 
 
 class OrderPage(BasePage):
     @allure.step("Заполняю форму заказа")
     def create_order(self, name, surname, address, metro_station, phone_number, option_term, locator_for_colors,
                      comment):
-        self.click_to_element(MainPageLocators.ACCEPT_COOKIE_BUTTON)
+        self.accept_cookie()
         self.click_to_element(OrderCard.BUTTON_GET_ORDER)
         self.send_keys(OrderCard.NAME, name)
         self.send_keys(OrderCard.SURNAME, surname)

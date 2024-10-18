@@ -1,7 +1,7 @@
 class Url:
     MAIN_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/'
     ORDER_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/order'
-
+    YANDEX_DZEN_URL = 'https://dzen.ru/?yredirect=true'
 
 class QuestionText:
     QUESTION_1 = 'Сколько это стоит? И как оплатить?'
